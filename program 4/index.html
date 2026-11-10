@@ -3,108 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  Portfolio</title>
+    <title>Sticky Navbar and Card Overlay</title>
     <style>
-        body {
-            font-family: sans-serif;
-            border: 0;
-            margin: 0;
-            padding: 20px;
-            
-        }
-        header {
-            background: rgb(131, 176, 208);
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        nav {
-            text-align: center;
-            margin-top: 15px;
-            background-color: rgb(146, 202, 236);
-            padding: 10px;
-        }
-        nav a {
-            text-decoration: none;
-            color: rgb(58, 115, 151);
-            font-weight: bold;
-            margin: 0 10px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
         main {
-            background: #fff;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 0 15px;
         }
         section {
-            margin-bottom: 20px;
-            
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #dddddd;
+            border-radius: 6px;
         }
-        footer {
+        h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+        h2 {
+            color: #4364b1;
+            padding-bottom: 6px;
+            margin-top: 0;
+        }
+        h3 {
+            margin: 0 0 8px 0;
+        }
+        a {
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #38bdf8;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #818fa1;
+            margin-top: 5px;
+        }
+        .overlay-card {
+            position: relative;
+            background-color: #e6e9ef;         
+            height: 220px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 1px solid #cbd5e1;
+        }
+        .card-banner {
+            background-color: #8189d2;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #93c5fd;
+            font-weight: bold;
+        }       
+        .card-overlay-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgb(140, 218, 247);
+            padding: 15px 20px;
+            z-index: 1;
+        }
+        .card-overlay-content p {
+            margin: 0;
+            font-size: 14px;
+            color: #e2e8f0;
+        }
+        #top-header {
+            background-color: #a5ecff;
             text-align: center;
-            margin-top: 20px;
-            color: rgb(139, 203, 232);
-            background-color: rgb(84, 110, 127);
-            padding: 10px;
+            padding: 35px 15px;
+        }
+        #sticky-navbar {
+            position: sticky;
+            top: 0;
+            background-color: #7a7e8c;
+            text-align: center;
+            padding: 14px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        #main-footer {
+            background-color: #64c0e4;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Bharath H</h1>
-        <p>cse  AI/ML student </p>
+    <header id="top-header">
+        <h1>CSS Positioning Lab</h1>
+        <p class="subtitle">Sticky Navbar &amp; Absolute Card Overlays</p>
     </header>
-
-    <nav>
-        <a href="#about">about</a>
-        <a href="#skills">skills</a>
-        <a href="#projects">projects</a>
-        <a href="#contact">contact</a>
+    <nav id="sticky-navbar">
+        <a href="#overview">Overview</a>
+        <a href="#featured-cards">Card Overlays</a>
+        <a href="#scroll-test">Scroll Test</a>
+        <a href="#main-footer">Footer</a>
     </nav>
-
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! I'm a passionate CSE student and web developer with experience in HTML,CSS;</p>
+        <main>
+        <section id="overview">
+            <h2>1. How CSS Positioning Works Here</h2>
+            <p>The navigation bar above uses position: sticky with <code>top: 0</code> so it stays fixed at the top of the screen when you scroll down.</p>
+            <p>The project cards below use position: relative on the parent container and position: absolute for the top badge and bottom text overlay.</p>
         </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Semantic Structure</li>
-                <li>CSS Layouts</li>
-                <li>Git and GitHub</li>
-            </ul>
+        <section id="featured-cards">
+            <h2>2. Project Cards with Overlays</h2>
+        <article class="overlay-card">
+                <div class="card-banner"> Command Center UI</div>
+                <div class="card-overlay-content">
+                    <h3>1.  Awareness Prototype</h3>
+                    <p>Built with HTML and CSS using relative and absolute positioning for HUD overlays.</p>
+                </div>
+            </article>
+            <article class="overlay-card">
+                <div class="card-banner"> Web Application</div>
+                <div class="card-overlay-content">
+                    <h3>2. Collaboration Platform</h3>
+                    <p>Designed with clean semantic layouts and deployed online via Vercel.</p>
+                </div>
+            </article>
         </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div>
-                <h3>College Examination Portal</h3>
-                <p>A web dashboard for students</p>
+        <section id="scroll-test">
+            <h2>3. Scroll Down to Test Sticky Navbar</h2>
+            <div class="info-box">
+                <h3>Position: Sticky</h3>
+                <p>An element with <code>position: sticky;</code> toggles between relative and fixed positioning depending on the user's scroll position.</p>
             </div>
-            <div>
-                <h3>Student Bio and  Portfolio</h3>
-                <p>portfolio built using clean HTML and CSS.</p>
+            <div class="info-box">
+                <h3>Position: Relative &amp; Absolute</h3>
+                <p>Setting <code>position: relative;</code> on the card establishes a positioning context. Any child element with position: absolute; is then placed accurately using top, bottom, left, or right inside that card.</p>
             </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p><strong>Email:</strong> bharath@example.com</p>
-            <p><strong>GitHub:</strong> github.com/bharathk</p>
-            <p><strong>Linkedin:</strong> linkedin.com/in/bharath</p>
-
+            <div class="info-box">
+                <h3>Z-Index Stacking</h3>
+                <p>The sticky navbar uses <code>z-index: 1000;</code> so that positioned cards slide neatly underneath the navigation bar as you scroll down the page.</p>
+            </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Bharath H</p>
+    <footer id="main-footer">
+        <p>&copy; 2026 Hanumanthu Bharath / Web Development Lab</p>
     </footer>
-
 </body>
 </html>

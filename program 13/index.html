@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Hobbies Dashboard</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 16px;
+    background: white;
+    color: black;
+  }
+  header {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 8px;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    text-decoration: underline;
+  }
+  header p {
+    margin: 0;
+    text-decoration: underline;
+  }
+  #grid-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    align-items: stretch;
+  }
+  #grid-box div {
+    display: grid;
+    align-content: start;
+    gap: 16px;
+    padding: 20px;
+    border: 2px solid black;
+  }
+  #grid-box h2 {
+    margin: 0;
+    text-decoration: underline;
+  }
+  #grid-box p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin: 0;
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+  }
+  footer {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    border: 2px solid black;
+  }
+  footer p {
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Student Hobbies Dashboard</h1>
+        <p>Tracking Personal Interests & Creative Pursuits</p>
+    </header>
+    <main>
+        <section id="grid-box">
+            <div>
+                <h2>Creative Arts</h2>
+                <p><strong>Primary Medium:</strong> Digital Illustration</p>
+                <p><strong>Daily Sketching:</strong> 45 minutes</p>
+                <p><strong>Instruments:</strong> Acoustic Guitar, Piano</p>
+                <p><strong>Writing Projects:</strong> Sci-Fi Short Stories</p>
+                <p><strong>Current Portfolio:</strong> 12 Art Pieces</p>
+            </div>
+            <div>
+                <h2>Sports & Fitness</h2>
+                <p><strong>Weekly Running:</strong> 15 kilometers</p>
+                <p><strong>Gym Routine:</strong> 4 Days / Week</p>
+                <p><strong>Yoga Sessions:</strong> Morning Flow</p>
+                <p><strong>Team Sports:</strong> Intramural Basketball</p>
+                <p><strong>Fitness Goal:</strong> Run a 5k Marathon</p>
+            </div>
+            <div>
+                <h2>Tech & Gaming</h2>
+                <p><strong>Coding Projects:</strong> Python Web Apps</p>
+                <p><strong>Game Development:</strong> Unity Engine</p>
+                <p><strong>Chess Rating:</strong> 1450 ELO</p>
+                <p><strong>Robotics Club:</strong> Arduino Circuits</p>
+                <p><strong>Favorite Genre:</strong> Strategy & RPG</p>
+            </div>
+            <div>
+                <h2>Outdoor & Travel</h2>
+                <p><strong>Weekend Hiking:</strong> Trail Exploration</p>
+                <p><strong>Indoor Gardening:</strong> Succulents & Herbs</p>
+                <p><strong>Cycling Routes:</strong> City Greenway</p>
+                <p><strong>Photography:</strong> Landscape & Macro</p>
+                <p><strong>Travel Log:</strong> 3 States Explored</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Student Hobby Tracker • Balance Work & Passion</p>
+    </footer>
+</body>
+</html>

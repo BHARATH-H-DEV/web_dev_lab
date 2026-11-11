@@ -3,118 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portfolio</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            border: 0;
-            margin: 0;
-            padding: 20px;
-            background-color: #e6d4d4;
-        }
-        header {
-            background: rgb(180, 233, 232);
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
+    <title>Full Portfolio Page</title>
+    <style>       
         nav {
+            background-color: #7b8a97;
             text-align: center;
-            margin-top: 15px;
+            padding: 12px 0;
         }
+
         nav a {
+            color: white;
             text-decoration: none;
-            color: black;
+            margin: 0 15px;
             font-weight: bold;
-            margin: 0 10px;
         }
+
         nav a:hover {
+            color: #38bdf8;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        section, aside {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid whitesmoke;
+            border-radius: 6px;
+        }
+
+        h2 {
+            color: #2a12e3;
+            padding-bottom: 6px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #1d4ed8;
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: #60badb;
+            text-decoration: none;
+        }
+
+        a:hover {
             text-decoration: underline;
         }
-        main {
-            background: #fff;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
+        .tagline {
+            font-size: 18px;
+            color: #f8fbfe;
+            margin-top: 8px;
         }
-        section {
-            margin-bottom: 20px;
+        .project-card {
+            padding: 12px 15px;
+            margin-bottom: 15px;
         }
-        footer {
+
+        .tech-stack {
+            font-size: 14px;
+            color: #6f6c6c;
+           
+        }
+        #portfolio-header {
+            background-color: #67b7e5;
+            color: white;
             text-align: center;
-            margin-top: 20px;
-            color: rgb(100, 178, 241);
+            padding: 35px 15px;
         }
-        #flex-box {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            gap: 16px;
+
+        #main-title {
+            font-size: 34px;
         }
-        #flex-box div{
-            gap: 16px;
-            border:2px solid rgb(121, 117, 117);
-            border-radius: 5px;
-            padding: 20px;
-            width: 200px;
-            height: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
+        #main-footer {
+            background-color: #7ac3e8;
+            color: white;
             text-align: center;
+            padding: 15px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Bharath H</h1>
-        <p>cse AI/ML student </p>
+    <header id="portfolio-header">
+        <h1 id="main-title">Hanumanthu Bharath</h1>
+        <p class="tagline"> CSE AI and ML Student</p>
     </header>
-
     <nav>
-        <a href="#about">about</a>
-        <a href="#skills">skills</a>
-        <a href="#projects">projects</a>
-        <a href="#contact">contact</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
     </nav>
-
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello! I'm a passionate CSE student and web developer with experience in HTML,CSS;</p>
+            <p>Welcome to my portfolio! I am a first-year B.Tech student specializing in Artificial Intelligence and Machine Learning. I enjoy building responsive web pages and solving Data Structures and Algorithms problems.</p>
         </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <article class="project-card">
+                <h3>1. Tactical Command Center Prototype</h3>
+                <p>A situational awareness web dashboard built during a college hackathon for real-time tracking and team coordination.</p>
+                <p class="tech-stack"><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+            </article>
+            <article class="project-card">
+                <h3>2. Tether Web Application</h3>
+                <p>A client-side web project developed for streamlined student collaboration and deployed online using Vercel.</p>
+                <p class="tech-stack"><strong>Technologies:</strong> HTML, CSS, Git and GitHub</p>
+            </article>
+            <article class="project-card">
+                <h3>3. College Portal Template</h3>
+                <p>A structured web interface demonstrating semantic layout design and CSS styling rules.</p>
+                <p class="tech-stack"><strong>Technologies:</strong> Semantic HTML, CSS</p>
+            </article>
+        </section>
+        <aside id="skills">
+            <h2>Technical Skills</h2>
             <ul>
-                <li>Semantic Structure</li>
-                <li>CSS Layouts</li>
-                <li>Git and GitHub</li>
+                <li><strong>Programming Languages:</strong> Java, Python, C</li>
+                <li><strong>Web Technologies:</strong> HTML, CSS</li>
+                <li><strong>Tools and Platforms:</strong> Git, GitHub, Vercel, VS Code</li>
+            </ul>
+        </aside>
+        <section id="achievements">
+            <h2>Hackathons and Activities</h2>
+            <ul>
+                <li>Participated in Argonyx '26 Hackathon with Team Pivot.</li>
+                <li>Competed in campus ideathons and online coding contests on HackerRank.</li>
             </ul>
         </section>
-
-        <section id="flex">
-            <h2>Advanced Flexbox Application</h2>
-        <div id="flex-box">
-            <div>card1</div>
-            <div>card2</div>
-            <div>card3</div>
-            <div>card4</div>
-        </div>
-        </section>
-
         <section id="contact">
-            <p><strong>LinkedIn:</strong> linkedin.com/in/bharathh</p>
-            <p><strong>Email:</strong> bharath@example.com</p>
-            <p><strong>GitHub:</strong> github.com/bharathh</p>
-            <p><strong>Linkedin:</strong> linkedin.com/bharathh</p>
-
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for project collaborations or hackathons:</p>
+            <p><strong>Email:</strong> <a >bharath@example.com</a></p>
+            <p><strong>GitHub:</strong> <a >github.com/bharath</a></p>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 bharath h</p>
+    <footer id="main-footer">
+        <p>&copy; 2026 Hanumanthu Bharath. Built with Semantic HTML and CSS.</p>
     </footer>
 
 </body>
